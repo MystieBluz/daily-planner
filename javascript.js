@@ -4,10 +4,9 @@ $("#currentDay").text(today.format("dddd, MMMM Do YYYY, h:mm a"));
 
 $(document).ready(function (){
     
-    // Timeblocks for specific time are color coded to indicate Past, Present or Future
     function currentTime(){
+        // Timeblocks for specific time are color coded to indicate Past, Present or Future
         var activeTime = moment().hour();
-
         $(".time-block").each(function (){
             var colorTimeBlock = parseInt($(this).attr("id").split("hour")[1]);
 
@@ -36,7 +35,6 @@ $(document).ready(function (){
         // Save Input in Local Storage
         localStorage.setItem(time, input);
     })
-
     }
 
     // Local Storage
@@ -50,7 +48,7 @@ $(document).ready(function (){
     $("#4PM .description").val(localStorage.getItem("4PM"));
     $("#5PM .description").val(localStorage.getItem("5PM"));
 
-    
+    // Calls Function
     currentTime();
 
 })
