@@ -40,18 +40,17 @@ $(document).ready(function (){
     }
 
     // Local Storage
-    $("#9 .description").val(localStorage.getItem("9"));
-    $("#10 .description").val(localStorage.getItem("10"));
-    $("#11 .description").val(localStorage.getItem("11"));
-    $("#12 .description").val(localStorage.getItem("12"));
-    $("#1 .description").val(localStorage.getItem("1"));
-    $("#2 .description").val(localStorage.getItem("2"));
-    $("#3 .description").val(localStorage.getItem("3"));
-    $("#4 .description").val(localStorage.getItem("4"));
-    $("#5 .description").val(localStorage.getItem("5"));
+    $("#9AM .description").val(localStorage.getItem("9AM"));
+    $("#10AM .description").val(localStorage.getItem("10AM"));
+    $("#11AM .description").val(localStorage.getItem("11AM"));
+    $("#12PM .description").val(localStorage.getItem("12PM"));
+    $("#1PM .description").val(localStorage.getItem("1PM"));
+    $("#2PM .description").val(localStorage.getItem("2PM"));
+    $("#3PM .description").val(localStorage.getItem("3PM"));
+    $("#4PM .description").val(localStorage.getItem("4PM"));
+    $("#5PM .description").val(localStorage.getItem("5PM"));
 
-
-
+    
     currentTime();
 
 })
