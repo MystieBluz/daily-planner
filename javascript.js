@@ -1,54 +1,55 @@
 // Current Date and Time in Header
-var today = moment();
-$("#currentDay").text(today.format("dddd, MMMM Do YYYY, h:mm a"));
+$("#currentDay").text(moment().format("dddd, MMMM Do"));
 
-$(document).ready(function (){
+
     
     function currentTime(){
         // Timeblocks for specific time are color coded to indicate Past, Present or Future
-        var activeTime = moment().hour();
-        $(".time-block").each(function (){
-            var colorTimeBlock = parseInt($(this).attr("id").split("hour")[0]);
-
-            if (colorTimeBlock < activeTime) {
+        $(".time-block").each(function(){
+            var colorTimeBlock = parseInt($(this).attr("id").replace("hour",""));
+            console.log("colorTimeBlock", colorTimeBlock)
+            var activeTime = parseInt(moment().format("h"));
+            console.log("activeTime", activeTime)
+            
+            if(colorTimeBlock < activeTime){
                 $(this).addClass("past");
-                $(this).removeClass("present");
-                $(this).removeClass("future");
-            }
-            else if (colorTimeBlock === activeTime) {
-                $(this).removeClass("past");
-                $(this).addClass("present");
-                $(this).removeClass("future");
-            }
-            else  {
-                $(this).removeClass("past");
-                $(this).removeClass("present");
+                $(this).removeClass("present")
+                $(this).removeClass("future")
+            } else if (colorTimeBlock > activeTime){
                 $(this).addClass("future");
+                $(this).removeClass("past")
+                $(this).removeClass("present")
+            } else {
+                $(this).addClass("present")
+                $(this).removeClass("past")
+                $(this).removeClass("future")
             }
         })
 
-        // Save Button for Input in Text Area
-    $(".saveBtn").on("click", function (){
+       
+    }
+
+    // Calls Function
+    currentTime();
+
+     // Save Button for Input in Text Area
+     $(".saveBtn").on("click", function (){
         var input = $(this).siblings(".description").val();
         var time = $(this).parent().attr("id");
 
         // Save Input in Local Storage
         localStorage.setItem(time, input);
     })
-    }
 
     // Local Storage
-    $("#9AM .description").val(localStorage.getItem("9AM"));
-    $("#10AM .description").val(localStorage.getItem("10AM"));
-    $("#11AM .description").val(localStorage.getItem("11AM"));
-    $("#12PM .description").val(localStorage.getItem("12PM"));
-    $("#1PM .description").val(localStorage.getItem("1PM"));
-    $("#2PM .description").val(localStorage.getItem("2PM"));
-    $("#3PM .description").val(localStorage.getItem("3PM"));
-    $("#4PM .description").val(localStorage.getItem("4PM"));
-    $("#5PM .description").val(localStorage.getItem("5PM"));
+    $("#9 .description").val(localStorage.getItem("9"));
+    $("#10 .description").val(localStorage.getItem("10"));
+    $("#11 .description").val(localStorage.getItem("11"));
+    $("#12 .description").val(localStorage.getItem("12"));
+    $("#1 .description").val(localStorage.getItem("1"));
+    $("#2 .description").val(localStorage.getItem("2"));
+    $("#3 .description").val(localStorage.getItem("3"));
+    $("#4 .description").val(localStorage.getItem("4"));
+    $("#5 .description").val(localStorage.getItem("5"));
 
-    // Calls Function
-    currentTime();
-
-})
+    
