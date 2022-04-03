@@ -34,7 +34,7 @@ THEN the saved events persist
 
 You can view my GitHub and Live URL below:
 ### [GitHub Link](https://github.com/mduhart82/coding-quiz) 
-### [Live URL]()
+### [Live URL](https://mduhart82.github.io/daily-planner/)
 
 
 
