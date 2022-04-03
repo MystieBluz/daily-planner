@@ -1,10 +1,10 @@
-// Current Date and Time in Header
+// Current Date in Header
 $("#currentDay").text(moment().format("dddd, MMMM Do"));
 
 
     
     function currentTime(){
-        // Timeblocks for specific time are color coded to indicate Past, Present or Future
+        // Timeblocks for specific time are color coded to indicate Past(Grey), Present(Red) or Future(Green)
         $(".time-block").each(function(){
             var colorTimeBlock = parseInt($(this).attr("id").replace("hour",""));
             console.log("colorTimeBlock", colorTimeBlock)
