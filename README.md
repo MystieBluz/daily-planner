@@ -4,7 +4,7 @@
 
 My task for this assignment was to a create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery. 
 
-I utilized html, css, javascript and git to complete this homework assignment. 
+I utilized html, css, js and git to complete this homework assignment. 
 
 ## User Story
 
@@ -23,7 +23,7 @@ THEN the current day is displayed at the top of the calendar
 WHEN I scroll down
 THEN I am presented with timeblocks for standard business hours
 WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
+THEN each timeblock is color coded to indicate whether it is in the past(color:Grey), present(color:Red), or future(color:Green)
 WHEN I click into a timeblock
 THEN I can enter an event
 WHEN I click the save button for that timeblock
