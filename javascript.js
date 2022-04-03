@@ -8,7 +8,7 @@ $(document).ready(function (){
         // Timeblocks for specific time are color coded to indicate Past, Present or Future
         var activeTime = moment().hour();
         $(".time-block").each(function (){
-            var colorTimeBlock = parseInt($(this).attr("id").split("hour")[1]);
+            var colorTimeBlock = parseInt($(this).attr("id").split("hour"));
 
             if (colorTimeBlock < activeTime) {
                 $(this).addClass("past");
@@ -20,7 +20,7 @@ $(document).ready(function (){
                 $(this).addClass("present");
                 $(this).removeClass("future");
             }
-            else {
+            else  {
                 $(this).removeClass("past");
                 $(this).removeClass("present");
                 $(this).addClass("future");
