@@ -42,7 +42,7 @@ $("#currentDay").text(moment().format("dddd, MMMM Do"));
     })
 
     // Local Storage
-    $("#9 .description").val(localStorage.getItem("9"));
+    $("#9AM .description").val(localStorage.getItem("9"));
     $("#10 .description").val(localStorage.getItem("10"));
     $("#11 .description").val(localStorage.getItem("11"));
     $("#12 .description").val(localStorage.getItem("12"));
