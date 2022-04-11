@@ -38,5 +38,5 @@ You can view my GitHub and Live URL below:
 
 
 
-##### Screenshot of coding quiz:
+##### Screenshot of daily planner:
 ![](./Images/daily%20planner%20srnsht.png)
