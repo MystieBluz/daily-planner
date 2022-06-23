@@ -33,8 +33,8 @@ THEN the saved events persist
 ```
 
 You can view my GitHub and Live URL below:
-### [GitHub Link](https://github.com/mduhart82/daily-planner) 
-### [Live URL](https://mduhart82.github.io/daily-planner/)
+### [GitHub Link](https://github.com/MystieBluz/daily-planner) 
+### [Live URL](https://mystiebluz.github.io/daily-planner/)
 
 
 
